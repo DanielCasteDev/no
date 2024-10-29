@@ -17,7 +17,7 @@ function AuthAndMonitor() {
 
   const handleRegister = async () => {
     try {
-      await axios.post('http://localhost:4001/api/auth/register', { username, password });
+      await axios.post('https://apimongo-4.onrender.com/api/auth/register', { username, password });
       toast.success('Usuario registrado con éxito 🎉');
     } catch (error) {
       toast.error('Error al registrar usuario 😢');
@@ -26,7 +26,7 @@ function AuthAndMonitor() {
 
   const handleDetectChanges = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/api/auth/verificar-cambios');
+      const response = await axios.get('https://apimongo-4.onrender.com/api/auth/verificar-cambios');
       const { mensaje, alerta, cambios } = response.data;
 
       if (alerta) {
@@ -42,7 +42,7 @@ function AuthAndMonitor() {
 
   const handleGetLogs = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/api/auth/logs');
+      const response = await axios.get('https://apimongo-4.onrender.com/api/auth/logs');
       setLogs(response.data);
       toast.info('Logs obtenidos correctamente 📝');
     } catch (error) {
