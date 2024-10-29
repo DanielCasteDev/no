@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+/* Estilo General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: linear-gradient(135deg, #060627, #2929fe);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column; /* Cambiado a columna para que los elementos se apilen verticalmente */
+}
+
+/* Contenedor Principal */
+.auth-monitor-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto; /* Añadido margen para separar del contenedor de logs */
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Tarjetas de Autenticación */
+.auth-card {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 20px 0; /* Aumenta el margen vertical para separar las tarjetas */
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Contenedor de Logs (Diseño más ancho) */
+.logs-container {
+  margin-left: -180px;
+  width: 200%; /* Mayor ancho */
+  max-width: 800px; /* Limita el ancho para pantallas grandes */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  animation: fadeIn 1.2s ease-in-out; /* Aplica la misma animación */
+}
+
+.logs-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Tabla de Logs */
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.logs-table th,
+.logs-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.logs-table th {
+  background-color: #b0c4de;
+  color: #333;
+  font-weight: bold;
+}
+
+.logs-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.logs-table tr:hover {
+  background-color: #dcdcdc;
+}
+
+/* Campos de Entrada */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Contenedor de Contraseña */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Botones */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.primary-btn {
+  background-color: #4CAF50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.primary-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.secondary-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: #0b7dda;
+  transform: scale(1.05);
+}
+
+.action-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.action-btn:hover {
+  background-color: #fb8c00;
+  transform: scale(1.05);
+}
+
+/* Animación */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
 }
