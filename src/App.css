@@ -12,14 +12,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Cambiado a columna para que los elementos se apilen verticalmente */
+  flex-direction: column;
 }
 
 /* Contenedor Principal */
 .auth-monitor-container {
   width: 90%;
   max-width: 400px;
-  margin: 20px auto; /* Añadido margen para separar del contenedor de logs */
+  margin: 20px auto;
   text-align: center;
   animation: fadeIn 1.2s ease-in-out;
 }
@@ -28,7 +28,7 @@ body {
 .auth-card {
   background-color: #f1f1f1;
   padding: 20px;
-  margin: 20px 0; /* Aumenta el margen vertical para separar las tarjetas */
+  margin: 20px 0;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -38,51 +38,7 @@ body {
   color: #333;
 }
 
-/* Contenedor de Logs (Diseño más ancho) */
-.logs-container {
-  margin-left: -180px;
-  width: 200%; /* Mayor ancho */
-  max-width: 800px; /* Limita el ancho para pantallas grandes */
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  overflow-x: auto; /* Permite el desplazamiento horizontal */
-  animation: fadeIn 1.2s ease-in-out; /* Aplica la misma animación */
-}
 
-.logs-container h2 {
-  margin-bottom: 15px;
-  color: #333;
-}
-
-/* Tabla de Logs */
-.logs-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.logs-table th,
-.logs-table td {
-  padding: 12px 16px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  white-space: nowrap;
-}
-
-.logs-table th {
-  background-color: #b0c4de;
-  color: #333;
-  font-weight: bold;
-}
-
-.logs-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.logs-table tr:hover {
-  background-color: #dcdcdc;
-}
 
 /* Campos de Entrada */
 .input-field {
@@ -160,4 +116,27 @@ body {
 @keyframes fadeIn {
   0% { opacity: 0; transform: scale(0.8); }
   100% { opacity: 1; transform: scale(1); }
+}
+
+.toggle-link {
+  color: #0b7dda;
+}
+
+.titulo {
+  color: #ddd;
+}
+  /* Estilo General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #060627, #2929fe);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

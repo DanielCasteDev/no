@@ -1,0 +1,82 @@
+/* Estilo General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #060627, #2929fe);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Cambiado a columna para que los elementos se apilen verticalmente */
+  }
+  
+  /* Contenedor Principal */
+  .auth-monitor-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto; /* Añadido margen para separar del contenedor de logs */
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Tarjetas de Autenticación */
+  .auth-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 20px 0; /* Aumenta el margen vertical para separar las tarjetas */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-card h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Campos de Entrada */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  /* Botones */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  .primary-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .primary-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* Animación */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  .toggle-link {
+    color: #0b7dda;
+  }
+  
