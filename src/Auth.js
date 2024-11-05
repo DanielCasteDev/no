@@ -12,7 +12,7 @@ const Auth = ({ onLoginSuccess }) => {
   const navigate = useNavigate();
 
   // Definir los endpoints para el registro e inicio de sesión
-  const API_BASE_URL = 'http://localhost:4001/api/auth'; // Cambia esto según tu configuración
+  const API_BASE_URL = 'https://apimongo-3.onrender.com/api/auth'; // Cambia esto según tu configuración
   const REGISTER_ENDPOINT = `${API_BASE_URL}/register`;
   const LOGIN_ENDPOINT = `${API_BASE_URL}/login`;
 

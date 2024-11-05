@@ -27,7 +27,7 @@ function Monitor() {
   // Fetch users
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/api/auth/users');
+      const response = await axios.get('https://apimongo-3.onrender.com/api/auth/users');
       setUsers(response.data);
     } catch (error) {
       toast.error('Error al obtener los usuarios');
@@ -37,7 +37,7 @@ function Monitor() {
   // Fetch logs
   const fetchLogs = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/api/auth/logs');
+      const response = await axios.get('https://apimongo-3.onrender.com/api/auth/logs');
       const logsWithSeverity = response.data.map(log => {
         let severidad = 'sin-importancia';
         if (log.descripcion.includes('actualizado')) {
@@ -82,12 +82,12 @@ function Monitor() {
       console.log('Actualizando usuario con ID:', currentUserId);
       console.log('Datos a actualizar:', newUser); // Verificar qué datos se están enviando
 
-      const response = await axios.put(`http://localhost:4001/api/auth/users/${currentUserId}`, newUser);
+      const response = await axios.put(`https://apimongo-3.onrender.com/api/auth/users/${currentUserId}`, newUser);
       toast.success(response.data.message);
       console.log('Respuesta del servidor:', response.data);
     } else {
       // Crear usuario
-      const response = await axios.post('http://localhost:4001/api/auth/register', newUser);
+      const response = await axios.post('https://apimongo-3.onrender.com/api/auth/register', newUser);
       toast.success(response.data.message);
     }
 
@@ -115,7 +115,7 @@ function Monitor() {
     });
 
     try {
-      const response = await axios.get('http://localhost:4001/api/auth/verificar-cambios');
+      const response = await axios.get('https://apimongo-3.onrender.com/api/auth/verificar-cambios');
       const { mensaje, alerta, cambios } = response.data;
       swalLoading.close();
 
@@ -149,7 +149,7 @@ function Monitor() {
   // Delete user
   const handleDeleteUser = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:4001/api/auth/users/${id}`);
+      const response = await axios.delete(`https://apimongo-3.onrender.com/api/auth/users/${id}`);
       toast.success(response.data.message);
       fetchUsers(); // Refresh users after deletion
       fetchLogs();  // Refresh logs after deleting a user
